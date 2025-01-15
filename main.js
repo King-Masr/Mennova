@@ -94,10 +94,13 @@ function loadQuestion() {
   const optionsList = document.getElementById("options");
   optionsList.innerHTML = ""; // Clear previous options
   quizData[currentQuestion].options.forEach((option, index) => {
+    console.log(option);
+    console.log(index);
     const li = document.createElement("li");
     const input = document.createElement("input");
     input.type = "radio";
     input.name = "option";
+    input.id = "radio";
     input.value = index;
     const label = document.createElement("label");
     label.innerHTML = option;
