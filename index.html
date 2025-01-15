@@ -8,17 +8,19 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to the Quiz</h1>
+    <h1>امتحان منظمات دولية</h1>
   </header>
   <main>
     <section class="quiz-container">
       <div class="question-container">
         <h2 id="question"></h2>
-        <ul id="options">
-          <!-- Options will be generated dynamically -->
+        <ul id="answers">
+          <!-- Answers will be generated dynamically -->
         </ul>
-        <button type="button" id="prev-btn" class="btn">Previous</button>
-        <button type="button" id="next-btn" class="btn">Next</button>
+        <section id="options">
+          <button type="button" id="prev-btn" class="btn">Previous</button>
+          <button type="button" id="next-btn" class="btn">Next</button>
+        </section>
       </div>
     </section>
     <div class="result-container" id="result-container">

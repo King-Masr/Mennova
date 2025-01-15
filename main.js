@@ -2,7 +2,7 @@ const quizData = [
   {
     question:
       "1. تعتبر ......... من اهم المؤسسات الفاعله في صنع السياسات العامه للدولة",
-    options: [
+    answers: [
       "الجامعات الدولية",
       "المنظمات الدولية",
       "البنك الدولي",
@@ -13,7 +13,7 @@ const quizData = [
   {
     question:
       "2. هي الهيئات والمؤسسات التي يتكون منها المجتمع الدولي وتشارك في تفعيل اعاده الجماعه الدولية",
-    options: [
+    answers: [
       "المنظمات الدولية",
       "الجامعات الدولية",
       "البنك الدولي",
@@ -23,7 +23,7 @@ const quizData = [
   },
   {
     question: "3. العناصر المكونه للمنظمات الدولية تتمثل في .........",
-    options: [
+    answers: [
       "الافراد",
       "الادارة الفاعلة",
       "الادوات والتكنولوجيا",
@@ -34,7 +34,18 @@ const quizData = [
   {
     question:
       "4. هم العنصر الجوهري في المنظمه وهم الذين يتفاعلون مع بعضهم البعض  ويصنعون من خلال هذا التفاعل",
-    options: [
+    answers: [
+      "الافراد",
+      "الادارة الفاعلة",
+      "الادوات والتكنولوجيا",
+      "لا شئ ما سبق",
+    ],
+    answer: 2,
+  },
+  {
+    question:
+      "5. تعد بمثابه العفل الذي تسير بمقتضاه المنزمه فهي التي تصدر القرارات وترسم الخطط وتنظم وتحكم علاقات الافراد",
+    answers: [
       "الافراد",
       "الادارة الفاعلة",
       "الادوات والتكنولوجيا",
@@ -44,42 +55,37 @@ const quizData = [
   },
   {
     question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answers: ["Earth", "Saturn", "Jupiter", "Uranus"],
     answer: 2,
   },
   {
     question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answers: ["Earth", "Saturn", "Jupiter", "Uranus"],
     answer: 2,
   },
   {
     question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answers: ["Earth", "Saturn", "Jupiter", "Uranus"],
     answer: 2,
   },
   {
     question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answers: ["Earth", "Saturn", "Jupiter", "Uranus"],
     answer: 2,
   },
   {
     question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answers: ["Earth", "Saturn", "Jupiter", "Uranus"],
     answer: 2,
   },
   {
     question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answers: ["Earth", "Saturn", "Jupiter", "Uranus"],
     answer: 2,
   },
   {
     question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
-    answer: 2,
-  },
-  {
-    question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answers: ["Earth", "Saturn", "Jupiter", "Uranus"],
     answer: 2,
   },
   // Add more questions here...
@@ -91,22 +97,21 @@ let score = 0;
 function loadQuestion() {
   document.getElementById("question").innerHTML =
     quizData[currentQuestion].question;
-  const optionsList = document.getElementById("options");
-  optionsList.innerHTML = ""; // Clear previous options
-  quizData[currentQuestion].options.forEach((option, index) => {
-    console.log(option);
-    console.log(index);
+  const answersList = document.getElementById("answers");
+  answersList.innerHTML = ""; // Clear previous answers
+  quizData[currentQuestion].answers.forEach((answer, index) => {
     const li = document.createElement("li");
     const input = document.createElement("input");
     input.type = "radio";
     input.name = "option";
-    input.id = "radio";
+    input.id = "q"+index;
     input.value = index;
     const label = document.createElement("label");
-    label.innerHTML = option;
+    label.innerHTML = answer;
+    label.htmlFor = "q"+index;
     li.appendChild(input);
     li.appendChild(label);
-    optionsList.appendChild(li);
+    answersList.appendChild(li);
   });
 }
 
@@ -136,8 +141,8 @@ document.getElementById("next-btn").addEventListener("click", () => {
     } else {
       loadQuestion();
     }
-  } else {
-    alert("Please select an option before proceeding.");
+  // } else {
+  //   alert("Please select an answer before proceeding.");
   }
 });
 
