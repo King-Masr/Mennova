@@ -1,8 +1,81 @@
 const quizData = [
   {
-    question: "What is the capital of France?",
-    options: ["Paris", "London", "Berlin", "Rome"],
+    question:
+      "1. تعتبر ......... من اهم المؤسسات الفاعله في صنع السياسات العامه للدولة",
+    options: [
+      "الجامعات الدولية",
+      "المنظمات الدولية",
+      "البنك الدولي",
+      "منظمه العمل الدولية",
+    ],
     answer: 0,
+  },
+  {
+    question:
+      "2. هي الهيئات والمؤسسات التي يتكون منها المجتمع الدولي وتشارك في تفعيل اعاده الجماعه الدولية",
+    options: [
+      "المنظمات الدولية",
+      "الجامعات الدولية",
+      "البنك الدولي",
+      "منظمه العمل الدولية",
+    ],
+    answer: 2,
+  },
+  {
+    question: "3. العناصر المكونه للمنظمات الدولية تتمثل في .........",
+    options: [
+      "الافراد",
+      "الادارة الفاعلة",
+      "الادوات والتكنولوجيا",
+      "جميع ما سبق",
+    ],
+    answer: 2,
+  },
+  {
+    question:
+      "4. هم العنصر الجوهري في المنظمه وهم الذين يتفاعلون مع بعضهم البعض  ويصنعون من خلال هذا التفاعل",
+    options: [
+      "الافراد",
+      "الادارة الفاعلة",
+      "الادوات والتكنولوجيا",
+      "لا شئ ما سبق",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answer: 2,
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answer: 2,
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answer: 2,
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answer: 2,
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answer: 2,
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answer: 2,
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+    answer: 2,
   },
   {
     question: "What is the largest planet in our solar system?",
