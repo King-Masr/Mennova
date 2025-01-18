@@ -1,0 +1,70 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+/* Centered Form Container */
+form {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+/* Labels */
+form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+/* Input Fields */
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333333;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 4px rgba(0, 120, 215, 0.3);
+}
+/* Submit Button */
+form button {
+  background-color: #0078d7;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+form button:hover {
+  background-color: #005bb5;
+}
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+  form {
+    padding: 15px 20px;
+  }
+  form button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

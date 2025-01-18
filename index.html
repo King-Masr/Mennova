@@ -12,6 +12,18 @@
   </header>
   <main>
     <section class="quiz-container">
+      <select title="questions" id="section-selector" onchange="loadQuestion(this.value)">
+        <option value="0">Q. 1</option>
+        <option value="1">Q. 2</option>
+        <option value="2">Q. 3</option>
+        <option value="3">Q. 4</option>
+        <option value="4">Q. 5</option>
+        <option value="5">Q. 6</option>
+        <option value="6">Q. 7</option>
+        <option value="7">Q. 8</option>
+        <option value="8">Q. 9</option>
+        <option value="9">Q. 10</option>
+      </select>
       <div class="question-container">
         <h2 id="question"></h2>
         <ul id="answers">

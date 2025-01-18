@@ -94,7 +94,7 @@ const quizData = [
 let currentQuestion = 0;
 let score = 0;
 
-function loadQuestion() {
+function loadQuestion(currentQuestion) {
   document.getElementById("question").innerHTML =
     quizData[currentQuestion].question;
   const answersList = document.getElementById("answers");
@@ -104,11 +104,11 @@ function loadQuestion() {
     const input = document.createElement("input");
     input.type = "radio";
     input.name = "option";
-    input.id = "q"+index;
+    input.id = "q" + index;
     input.value = index;
     const label = document.createElement("label");
     label.innerHTML = answer;
-    label.htmlFor = "q"+index;
+    label.htmlFor = "q" + index;
     li.appendChild(input);
     li.appendChild(label);
     answersList.appendChild(li);
@@ -154,4 +154,4 @@ document.getElementById("prev-btn").addEventListener("click", () => {
 });
 
 // Initial load
-loadQuestion();
+loadQuestion(currentQuestion);
