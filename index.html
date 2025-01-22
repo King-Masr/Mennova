@@ -3,80 +3,64 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mennova</title>
+    <title>Mennova - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
     <header>
-      <h1>Welcome to the Mennova</h1>
-      <nav>
-        <ul>
-          <li><a href="#exams">Exams</a></li>
-          <li><a href="#scores">Scores</a></li>
-          <li><a href="#summaries">Summaries</a></li>
-          <li><a href="#lectures">Lectures</a></li>
-        </ul>
-      </nav>
+      <section class="container">
+        <h1>Mennova</h1>
+        <nav>
+          <ul>
+            <li><a href="/login">Login</a></li>
+            <li><a href="#exams">Exams</a></li>
+            <li><a href="#scores">Scores</a></li>
+            <li><a href="#summaries">Summaries</a></li>
+            <li><a href="#lectures">Lectures</a></li>
+          </ul>
+        </nav>
+      </section>
     </header>
 
     <main>
-      <!-- Exams Section -->
       <section id="exams">
         <h2>Exams</h2>
-        <p>Start your exams below:</p>
-        <button onclick="startExam()">Start Exam</button>
+        <p>Take your exams online conveniently. Click the link below to start:</p>
+        <a href="/exams" class="btn">Start Exams</a>
       </section>
 
-      <!-- Scores Section -->
       <section id="scores">
         <h2>Scores</h2>
-        <h3>Top 3 Students</h3>
-        <ol>
-          <li>1. Student A - 98%</li>
-          <li>2. Student B - 95%</li>
-          <li>3. Student C - 92%</li>
-        </ol>
-        <h3>Your Scores</h3>
-        <p>You scored: <strong>85%</strong> in your last exam.</p>
+        <p>Check your progress with your latest scores:</p>
+        <div class="top-scores">
+          <h3>Top 3 Scores</h3>
+          <ul>
+            <li>1. Student A - 95%</li>
+            <li>2. Student B - 93%</li>
+            <li>3. Student C - 90%</li>
+          </ul>
+        </div>
+        <a href="/scores" class="btn">View All Scores</a>
       </section>
 
-      <!-- Summaries Section -->
       <section id="summaries">
         <h2>Summaries</h2>
-        <ul>
-          <li><a href="summary1.pdf" target="_blank">Chapter 1 Summary</a></li>
-          <li><a href="summary2.pdf" target="_blank">Chapter 2 Summary</a></li>
-          <li><a href="summary3.pdf" target="_blank">Chapter 3 Summary</a></li>
-        </ul>
+        <p>Quickly revise key points from your lectures:</p>
+        <a href="/summaries" class="btn">View Summaries</a>
       </section>
 
-      <!-- Lectures Section -->
       <section id="lectures">
         <h2>Lectures</h2>
-        <h3>Written Lectures</h3>
-        <ul>
-          <li><a href="lecture1.pdf" target="_blank">Lecture 1</a></li>
-          <li><a href="lecture2.pdf" target="_blank">Lecture 2</a></li>
-          <li><a href="lecture3.pdf" target="_blank">Lecture 3</a></li>
-        </ul>
-        <h3>Recorded Lectures</h3>
-        <ul>
-          <li><a href="lecture1.mp4" target="_blank">Lecture 1 Video</a></li>
-          <li><a href="lecture2.mp4" target="_blank">Lecture 2 Video</a></li>
-          <li><a href="lecture3.mp4" target="_blank">Lecture 3 Video</a></li>
-        </ul>
+        <p>Access your course materials, including written and recorded lectures:</p>
+        <div class="lecture-links">
+          <a href="/lectures/written" class="btn">Written Lectures</a>
+          <a href="/lectures/recorded" class="btn">Recorded Lectures</a>
+        </div>
       </section>
     </main>
     <footer>
       <p>&copy; 2025 Mennova. All rights reserved.</p>
     </footer>
-    <script>
-      function startExam() {
-        alert('Exam started! Good luck!');
-        // Redirect or initiate exam logic here
-        window.location.href = "exam.html";
-      }
-    </script>
   </body>
 </html>
