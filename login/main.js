@@ -6,21 +6,26 @@ document.getElementById("loginForm").addEventListener("submit", async function (
 
     // Hash the password before sending
     const hashedPassword = await hashPassword(password);
-
+    console.log(JSON.stringify({ username, password: hashedPassword }));
     // Example API call to validate login (replace with your API endpoint)
-    const response = await fetch("https://example.com/api/login", {
+    const response = await fetch("https://mennova.wuaze.com/system.php", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "API-Token": secret("API-Token"),
+      },
       body: JSON.stringify({ username, password: hashedPassword }),
     });
 
     if (response.ok) {
       const data = await response.json();
       sessionStorage.setItem("authToken", data.token); // Store token securely
-      alert("Login successful!");
+      // alert("Login successful!");
       // Redirect or load secure content
+      const baseUrl = window.location.origin;
+      window.location.href = baseUrl;
     } else {
-      alert("Invalid credentials");
+      // alert("Invalid credentials");
     }
   });
 
