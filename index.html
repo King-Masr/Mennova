@@ -1,47 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>امتحان منظمات دولية</h1>
-  </header>
-  <main>
-    <section class="quiz-container">
-      <select title="questions" id="section-selector" onchange="loadQuestion(this.value)">
-        <option value="0">Q. 1</option>
-        <option value="1">Q. 2</option>
-        <option value="2">Q. 3</option>
-        <option value="3">Q. 4</option>
-        <option value="4">Q. 5</option>
-        <option value="5">Q. 6</option>
-        <option value="6">Q. 7</option>
-        <option value="7">Q. 8</option>
-        <option value="8">Q. 9</option>
-        <option value="9">Q. 10</option>
-      </select>
-      <div class="question-container">
-        <h2 id="question"></h2>
-        <ul id="answers">
-          <!-- Answers will be generated dynamically -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mennova</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Mennova</h1>
+      <nav>
+        <ul>
+          <li><a href="#exams">Exams</a></li>
+          <li><a href="#scores">Scores</a></li>
+          <li><a href="#summaries">Summaries</a></li>
+          <li><a href="#lectures">Lectures</a></li>
         </ul>
-        <section id="options">
-          <button type="button" id="prev-btn" class="btn">Previous</button>
-          <button type="button" id="next-btn" class="btn">Next</button>
-        </section>
-      </div>
-    </section>
-    <div class="result-container" id="result-container">
-      <h2>Quiz Results</h2>
-      <hr>
-      <div id="results"></div>
-      <div id="percentage"></div>
-    </div>
-  </main>
-  <script src="main.js"></script>
-</body>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Exams Section -->
+      <section id="exams">
+        <h2>Exams</h2>
+        <p>Start your exams below:</p>
+        <button onclick="startExam()">Start Exam</button>
+      </section>
+
+      <!-- Scores Section -->
+      <section id="scores">
+        <h2>Scores</h2>
+        <h3>Top 3 Students</h3>
+        <ol>
+          <li>1. Student A - 98%</li>
+          <li>2. Student B - 95%</li>
+          <li>3. Student C - 92%</li>
+        </ol>
+        <h3>Your Scores</h3>
+        <p>You scored: <strong>85%</strong> in your last exam.</p>
+      </section>
+
+      <!-- Summaries Section -->
+      <section id="summaries">
+        <h2>Summaries</h2>
+        <ul>
+          <li><a href="summary1.pdf" target="_blank">Chapter 1 Summary</a></li>
+          <li><a href="summary2.pdf" target="_blank">Chapter 2 Summary</a></li>
+          <li><a href="summary3.pdf" target="_blank">Chapter 3 Summary</a></li>
+        </ul>
+      </section>
+
+      <!-- Lectures Section -->
+      <section id="lectures">
+        <h2>Lectures</h2>
+        <h3>Written Lectures</h3>
+        <ul>
+          <li><a href="lecture1.pdf" target="_blank">Lecture 1</a></li>
+          <li><a href="lecture2.pdf" target="_blank">Lecture 2</a></li>
+          <li><a href="lecture3.pdf" target="_blank">Lecture 3</a></li>
+        </ul>
+        <h3>Recorded Lectures</h3>
+        <ul>
+          <li><a href="lecture1.mp4" target="_blank">Lecture 1 Video</a></li>
+          <li><a href="lecture2.mp4" target="_blank">Lecture 2 Video</a></li>
+          <li><a href="lecture3.mp4" target="_blank">Lecture 3 Video</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Mennova. All rights reserved.</p>
+    </footer>
+    <script>
+      function startExam() {
+        alert('Exam started! Good luck!');
+        // Redirect or initiate exam logic here
+        window.location.href = "exam.html";
+      }
+    </script>
+  </body>
 </html>
