@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mennova - Login</title>
+    <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -46,10 +47,25 @@
           <h2>تسجيل حساب طالب جديد</h2>
           <label for="username">كود الطالب: </label>
           <input type="text" name="username" id="username" class="en" placeholder="241***72" autocomplete="username" required>
-          <label for="username">الاسم (رباعي): </label>
-          <input type="text" name="username" id="name" placeholder="اكتب اسمك" autocomplete="name" required>
-          <label for="username">رقم الهاتف (واتساب): </label>
-          <input type="text" name="username" id="phone" class="en" placeholder="0110****813" autocomplete="mobile" required>
+          <label for="name">الاسم (رباعي): </label>
+          <input type="text" name="name" id="name" placeholder="اكتب اسمك" autocomplete="name" required>
+          <label for="studentLevel">الفرقة: </label>
+          <select id="studentLevel" required>
+            <option value="1">الفرقة الاولى</option>
+            <option value="2">الفرقة الثانية</option>
+            <option value="3">الفرقة الثالثة</option>
+            <option value="4">الفرقة الرابعة</option>
+          </select>
+          <label>القسم: </label>
+          <section class="dropdown-container">
+            <input type="text" id="search" placeholder="البحث عن القسم...">
+            <ul id="department-list" class="dropdown-list">
+              <!-- Departments will be dynamically inserted here -->
+            </ul>
+          </section>
+          <input type="hidden" id="selected-department" name="department" required>
+          <label for="phone">رقم الهاتف (واتساب): </label>
+          <input type="text" name="phone" id="phone" class="en" placeholder="0110****813" autocomplete="tel">
           <label for="password">كلمة المرور: </label>
           <input type="password" name="password" id="password" class="en" placeholder="Password" autocomplete="new-password" required>
           <a href="#" id="haveaccount">لدي حساب بالفعل. تسجيل الدخول</a>
@@ -66,7 +82,9 @@
         </form>
       </main>
     </section>
-    <footer></footer>
+    <footer>
+      <p>كل الحقوق محفوظة &copy; 2025 Mennova</p>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
