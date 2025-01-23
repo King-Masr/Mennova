@@ -1,3 +1,13 @@
+/* Global Variables */
+:root {
+  --main-color: #0078d7;
+  --main-color-alt: #005bb5;
+  --main-background: #f3f4f6;
+  --main-transition: 0.5s;
+  --main-padding: 100px;
+  --animation-time: 0.6s;
+  --animation-alt-time: 5s;
+}
 /* General Styles */
 * {
   -webkit-box-sizing: border-box;
@@ -9,7 +19,7 @@ html {
 }
 body {
   font-family: "Work Sans", sans-serif;
-  background-color: #f3f4f6;
+  background-color: var(--main-background);
   direction: rtl;
   height: 100vh;
   margin: 0;
@@ -245,7 +255,7 @@ form input[type="password"] {
   color: #333333;
   outline: none;
   box-sizing: border-box;
-  transition: border-color 0.3s ease;
+  transition: border-color var(--main-transition) ease;
 }
 form input[type="text"]:focus,
 form input[type="password"]:focus {
@@ -260,7 +270,7 @@ form a {
 }
 /* Submit Button */
 form button {
-  background-color: #0078d7;
+  background-color: var(--main-color);
   color: #ffffff;
   font-size: 16px;
   padding: 10px 15px;
@@ -269,10 +279,10 @@ form button {
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--main-transition) ease;
 }
 form button:hover {
-  background-color: #005bb5;
+  background-color: var(--main-color-alt);
 }
 /* Responsive Adjustments */
 @media (max-width: 500px) {

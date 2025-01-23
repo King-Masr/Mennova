@@ -1,3 +1,13 @@
+/* Global Variables */
+:root {
+  --main-color: #0078d7;
+  --main-color-alt: #005bb5;
+  --main-background: #f3f4f6;
+  --main-transition: 0.5s;
+  --main-padding: 100px;
+  --animation-time: 0.6s;
+  --animation-alt-time: 5s;
+}
 /* General Reset */
 * {
   -webkit-box-sizing: border-box;
