@@ -3,17 +3,70 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Login</title>
+    <title>Mennova - Login</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <form action="" method="post" id="loginForm">
-      <label for="username">Username: </label>
-      <input type="text" name="username" id="username" placeholder="Username" autocomplete="username" required>
-      <label for="password">Password: </label>
-      <input type="password" name="password" id="password" placeholder="Password" autocomplete="current-password" required>
-      <button type="submit">Login</button>
-    </form>
+    <header>
+      <main>
+        <a href="/" title="Mennova">Mennova</a>
+        <nav>
+          <ul>
+            <li><a href="/login">تسجيل دخول</a></li>
+            <li><a href="/exams">الامتحانات</a></li>
+            <li><a href="/scores">النتائج</a></li>
+            <li><a href="/summaries">الملخصات</a></li>
+            <li><a href="/lectures">المحاضرات</a></li>
+            <li>
+              <a href="#" title="Other Links">روابط اخرى</a>
+              <section id="mega-menu">
+                <ul>
+                  <li><a href="#testimonials" title="Testimonials">Testimonials</a></li>
+                  <li><a href="#team" title="Team Members">Team Members</a></li>
+                  <li><a href="#services" title="Services">Services</a></li>
+                  <li><a href="#our-skills" title="Our Skills">Our Skills</a></li>
+                  <li><a href="#work-steps" title="How It Works">How It Works</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#events" title="Events">Events</a></li>
+                  <li><a href="#pricing" title="Pricing Plans">Pricing Plans</a></li>
+                  <li><a href="#video" title="Top Videos">Top Videos</a></li>
+                  <li><a href="#stats" title="Stats">Stats</a></li>
+                  <li><a href="#discount" title="Request A Discount">Request A Discount</a></li>
+                </ul>
+              </section>
+            </li>
+          </ul>
+        </nav>
+      </main>
+    </header>
+    <section id="landing">
+      <main>
+        <form action="" method="post" id="signupForm">
+          <h2>تسجيل حساب طالب جديد</h2>
+          <label for="username">كود الطالب: </label>
+          <input type="text" name="username" id="username" class="en" placeholder="241***72" autocomplete="username" required>
+          <label for="username">الاسم (رباعي): </label>
+          <input type="text" name="username" id="name" placeholder="اكتب اسمك" autocomplete="name" required>
+          <label for="username">رقم الهاتف (واتساب): </label>
+          <input type="text" name="username" id="phone" class="en" placeholder="0110****813" autocomplete="mobile" required>
+          <label for="password">كلمة المرور: </label>
+          <input type="password" name="password" id="password" class="en" placeholder="Password" autocomplete="new-password" required>
+          <a href="#" id="haveaccount">لدي حساب بالفعل. تسجيل الدخول</a>
+          <button type="submit">تسجيل حساب جديد</button>
+        </form>
+        <form action="" method="post" id="signinForm" style="display: none;">
+          <h2>تسجيل الدخول</h2>
+          <label for="username">كود الطالب: </label>
+          <input type="text" name="username" id="username" class="en" placeholder="241***72" autocomplete="username" required>
+          <label for="password">كلمة المرور: </label>
+          <input type="password" name="password" id="password" class="en" placeholder="Password" autocomplete="current-password" required>
+          <a href="#" id="newaccount">حساب جديد</a>
+          <button type="submit">تسجيل الدخول</button>
+        </form>
+      </main>
+    </section>
+    <footer></footer>
     <script src="main.js"></script>
   </body>
 </html>

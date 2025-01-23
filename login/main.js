@@ -1,3 +1,13 @@
+document.getElementById("haveaccount").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.getElementsByTagName("form")[1].style.display = "block";
+  document.getElementsByTagName("form")[0].style.display = "none";
+});
+document.getElementById("newaccount").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.getElementsByTagName("form")[0].style.display = "block";
+  document.getElementsByTagName("form")[1].style.display = "none";
+});
 document.getElementById("loginForm").addEventListener("submit", async function (e) {
     e.preventDefault();
 

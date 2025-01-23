@@ -9,47 +9,62 @@
   </head>
   <body>
     <header>
-      <section class="container">
-        <h1>Mennova</h1>
+      <main>
+        <a href="/" title="Mennova">Mennova</a>
         <nav>
           <ul>
-            <li><a href="/login">Login</a></li>
-            <li><a href="#exams">Exams</a></li>
-            <li><a href="#scores">Scores</a></li>
-            <li><a href="#summaries">Summaries</a></li>
-            <li><a href="#lectures">Lectures</a></li>
+            <li><a href="/login">تسجيل دخول</a></li>
+            <li><a href="/exams">الامتحانات</a></li>
+            <li><a href="/scores">النتائج</a></li>
+            <li><a href="/summaries">الملخصات</a></li>
+            <li><a href="/lectures">المحاضرات</a></li>
+            <li>
+              <a href="#" title="Other Links">روابط اخرى</a>
+              <section id="mega-menu">
+                <ul>
+                  <li><a href="#testimonials" title="Testimonials">Testimonials</a></li>
+                  <li><a href="#team" title="Team Members">Team Members</a></li>
+                  <li><a href="#services" title="Services">Services</a></li>
+                  <li><a href="#our-skills" title="Our Skills">Our Skills</a></li>
+                  <li><a href="#work-steps" title="How It Works">How It Works</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#events" title="Events">Events</a></li>
+                  <li><a href="#pricing" title="Pricing Plans">Pricing Plans</a></li>
+                  <li><a href="#video" title="Top Videos">Top Videos</a></li>
+                  <li><a href="#stats" title="Stats">Stats</a></li>
+                  <li><a href="#discount" title="Request A Discount">Request A Discount</a></li>
+                </ul>
+              </section>
+            </li>
           </ul>
         </nav>
-      </section>
+      </main>
     </header>
-
     <main>
       <section id="exams">
         <h2>Exams</h2>
         <p>Take your exams online conveniently. Click the link below to start:</p>
         <a href="/exams" class="btn">Start Exams</a>
       </section>
-
       <section id="scores">
         <h2>Scores</h2>
         <p>Check your progress with your latest scores:</p>
         <div class="top-scores">
           <h3>Top 3 Scores</h3>
           <ul>
-            <li>1. Student A - 95%</li>
-            <li>2. Student B - 93%</li>
-            <li>3. Student C - 90%</li>
+            <li id="thefirst">1. Student A - 95%</li>
+            <li id="thesecond">2. Student B - 93%</li>
+            <li id="thethird">3. Student C - 90%</li>
           </ul>
         </div>
         <a href="/scores" class="btn">View All Scores</a>
       </section>
-
       <section id="summaries">
         <h2>Summaries</h2>
         <p>Quickly revise key points from your lectures:</p>
         <a href="/summaries" class="btn">View Summaries</a>
       </section>
-
       <section id="lectures">
         <h2>Lectures</h2>
         <p>Access your course materials, including written and recorded lectures:</p>
@@ -62,5 +77,6 @@
     <footer>
       <p>&copy; 2025 Mennova. All rights reserved.</p>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
