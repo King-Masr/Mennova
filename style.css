@@ -1,0 +1,30 @@
+/* Sections */
+section {
+  padding: 20px 0;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
