@@ -1,4 +1,4 @@
-import { secret } from '@aws-amplify/backend';
+import { secret } from '@aws-amplify/backend-secret';
 document.getElementById("signupForm").onsubmit = function (e) {
   e.preventDefault();
   const action = "registration";
