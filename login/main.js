@@ -93,6 +93,53 @@ document.getElementById("department-form").addEventListener("submit", (e) => {
     alert("Please select a department.");
   }
 });
+document.getElementById("signupForm").onsubmit = function (e) {
+  e.preventDefault();
+  const action = "registration";
+  const username = document.getElementById("username").value;
+  const name = document.getElementById("name").value;
+  const level = document.getElementById("level").value;
+  const department = document.getElementById("selected-department").value;
+  const phone = document.getElementById("phone").value;
+  const password = document.getElementById("password").value;
+  // Hash the password before sending
+  const hashedPassword = hashPassword(password);
+  console.log(secret("API-Token"));
+  console.log(JSON.stringify({ username, password, password: hashedPassword }));
+};
+// document.getElementById("signupForm").addEventListener("submit", async function (e) {
+//   e.preventDefault();
+//   const action = "registration";
+//   const username = document.getElementById("username").value;
+//   const name = document.getElementById("name").value;
+//   const level = document.getElementById("level").value;
+//   const department = document.getElementById("selected-department").value;
+//   const phone = document.getElementById("phone").value;
+//   const password = document.getElementById("password").value;
+//   // Hash the password before sending
+//   const hashedPassword = await hashPassword(password);
+//   console.log(secret("API-Token"));
+//   console.log(JSON.stringify({ username, password, password: hashedPassword }));
+//   // Example API call to validate login (replace with your API endpoint)
+//   // const response = await fetch("https://mennova.wuaze.com/system.php", {
+//   //   method: "POST",
+//   //   headers: {
+//   //     "Content-Type": "application/json",
+//   //     "API-Token": secret("API-Token"),
+//   //   },
+//   //   body: JSON.stringify({ username, password }),
+//   // });
+//   // if (response.ok) {
+//   //   const data = await response.json();
+//   //   sessionStorage.setItem("authToken", data.token); // Store token securely
+//   //   // alert("Login successful!");
+//   //   // Redirect or load secure content
+//   //   const baseUrl = window.location.origin;
+//   //   window.location.href = baseUrl;
+//   // } else {
+//   //   // alert("Invalid credentials");
+//   // }
+// });
 document.getElementById("signinForm").addEventListener("submit", async function (e) {
   e.preventDefault();
   const username = document.getElementById("username").value;
