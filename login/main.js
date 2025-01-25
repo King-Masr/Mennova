@@ -1,4 +1,18 @@
 import { secret } from '@aws-amplify/backend';
+document.getElementById("signupForm").onsubmit = function (e) {
+  e.preventDefault();
+  const action = "registration";
+  const username = document.getElementById("username").value;
+  const name = document.getElementById("name").value;
+  const level = document.getElementById("level").value;
+  const department = document.getElementById("selected-department").value;
+  const phone = document.getElementById("phone").value;
+  const password = document.getElementById("password").value;
+  // Hash the password before sending
+  const hashedPassword = hashPassword(password);
+  console.log(secret("API-Token"));
+  console.log(JSON.stringify({ username, password, password: hashedPassword }));
+};
 document.getElementById("haveaccount").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementsByTagName("form")[1].style.display = "block";
@@ -89,25 +103,12 @@ document.getElementById("department-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const selectedValue = selectedDepartmentInput.value;
   if (selectedValue) {
-    alert(`Selected Department Value: ${selectedValue}`);
+    // alert(`Selected Department Value: ${selectedValue}`);
   } else {
-    alert("Please select a department.");
+    // alert("Please select a department.");
   }
 });
-document.getElementById("signupForm").onsubmit = function (e) {
-  e.preventDefault();
-  const action = "registration";
-  const username = document.getElementById("username").value;
-  const name = document.getElementById("name").value;
-  const level = document.getElementById("level").value;
-  const department = document.getElementById("selected-department").value;
-  const phone = document.getElementById("phone").value;
-  const password = document.getElementById("password").value;
-  // Hash the password before sending
-  const hashedPassword = hashPassword(password);
-  console.log(secret("API-Token"));
-  console.log(JSON.stringify({ username, password, password: hashedPassword }));
-};
+
 // document.getElementById("signupForm").addEventListener("submit", async function (e) {
 //   e.preventDefault();
 //   const action = "registration";
