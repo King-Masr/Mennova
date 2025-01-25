@@ -1,3 +1,4 @@
+import { secret } from '@aws-amplify/backend';
 document.getElementById("haveaccount").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementsByTagName("form")[1].style.display = "block";
