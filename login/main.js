@@ -1,18 +1,3 @@
-
-document.getElementById("signupForm").onsubmit = function (e) {
-  e.preventDefault();
-  const action = "registration";
-  const username = document.getElementById("username").value;
-  const name = document.getElementById("name").value;
-  const level = document.getElementById("level").value;
-  const department = document.getElementById("selected-department").value;
-  const phone = document.getElementById("phone").value;
-  const password = document.getElementById("password").value;
-  // Hash the password before sending
-  const hashedPassword = hashPassword(password);
-  console.log(secret("API-Token"));
-  console.log(JSON.stringify({ username, password, password: hashedPassword }));
-};
 document.getElementById("haveaccount").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementsByTagName("form")[1].style.display = "block";
