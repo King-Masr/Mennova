@@ -8,10 +8,7 @@ const otherStudentsList = document.getElementById("other-students");
 try {
   const response = await fetch(apiUrl, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "API-Token": secret("API-Token") // Replace with actual API token
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       "action": "getScores",
       "level": level,
