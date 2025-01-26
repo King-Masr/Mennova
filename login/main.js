@@ -54,9 +54,7 @@ const categories = {
 };
 const searchInput = document.getElementById("search");
 const departmentList = document.getElementById("department-list");
-const selectedDepartmentInput = document.getElementById(
-  "selected-department"
-);
+let selectedDepartmentInput = document.getElementById("selected-department");
 // Populate the dropdown with categories and departments
 Object.keys(categories).forEach((category) => {
   const categoryHeader = document.createElement("li");
@@ -96,16 +94,6 @@ searchInput.addEventListener("input", () => {
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".dropdown-container")) {
     departmentList.style.display = "none";
-  }
-});
-// Handle form submission
-document.getElementById("department-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const selectedValue = selectedDepartmentInput.value;
-  if (selectedValue) {
-    // alert(`Selected Department Value: ${selectedValue}`);
-  } else {
-    // alert("Please select a department.");
   }
 });
 document.getElementById("signupForm").addEventListener("submit", async function (e) {
