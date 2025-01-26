@@ -1,4 +1,22 @@
 {
+  "name": "mennova",
+  "version": "1.0.0",
+  "description": "Mennova is a modern educational platform offering college students access to exams and study materials, fostering knowledge and growth for a brighter future!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/King-Masr/Mennova.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/King-Masr/Mennova/issues"
+  },
+  "homepage": "https://github.com/King-Masr/Mennova#readme",
   "dependencies": {
     "@aws-amplify/backend-secret": "^1.1.5"
   }
