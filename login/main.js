@@ -118,6 +118,7 @@ document.getElementById("signinForm").addEventListener("submit", async function 
   // Example API call to validate login (replace with your API endpoint)
   const response = await fetch("https://mennova.wuaze.com/system.php", {
     method: "POST",
+    mode: "no-cors",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       action: "signin",
