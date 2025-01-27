@@ -120,8 +120,13 @@ document.getElementById("signinForm").addEventListener("submit", async function 
     method: "POST",
     mode: "no-cors",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ action: "signin", username: username, password: password}),
+    body: JSON.stringify({
+      action: "signin",
+      username: username,
+      password: password,
+    }),
   });
+  console.log(response);
   if (response.ok) {
     const data = await response.json();
     console.log(data);
