@@ -254,13 +254,14 @@ for (let i = 0; i < quizData.length; i++) {
 }
 let currentQuestion = 0;
 let score = 0;
-function loadQuestion(currentQuestion) {
-  document.getElementById("section-selector").value = currentQuestion;
+function loadQuestion(question) {
+  currentQuestion = question;
+  document.getElementById("section-selector").value = question;
   document.getElementById("question").innerHTML =
-    quizData[currentQuestion].question;
+    quizData[question].question;
   const answersList = document.getElementById("answers");
   answersList.innerHTML = ""; // Clear previous answers
-  quizData[currentQuestion].answers.forEach((answer, index) => {
+  quizData[question].answers.forEach((answer, index) => {
     const li = document.createElement("li");
     const input = document.createElement("input");
     input.type = "radio";
