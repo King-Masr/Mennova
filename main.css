@@ -18,11 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Work Sans", sans-serif;
-  background-color: var(--main-background);
-  direction: rtl;
-  height: 100vh;
   margin: 0;
+  height: 100vh;
+  direction: rtl;
+  background-color: var(--main-background);
+  font-family: sans-serif;
 }
 ::-webkit-scrollbar {
   width: 7px;
@@ -53,6 +53,50 @@ main {
 }
 .en {
   direction: ltr;
+}
+.mainTitle {
+  z-index: 1;
+  font-size: 30px;
+  cursor: default;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 6px;
+  margin: 0 auto 80px;
+  border: 2px solid black;
+  transition: var(--main-transition);
+}
+.mainTitle:hover {
+  color: white;
+  transition-delay: 0.8s;
+  border: 2px solid white;
+}
+.mainTitle::before, .mainTitle::after {
+  top: 50%;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  background-color: var(--main-color);
+}
+.mainTitle::before {
+  left: -30px;
+}
+.mainTitle::after {
+  right: -30px;
+}
+.mainTitle:hover::before {
+  z-index: -1;
+  animation: leftToRight var(--animation-time) linear forwards;
+}
+.mainTitle:hover::after {
+  z-index: -1;
+  animation: rightToLift var(--animation-time) linear forwards;
 }
 /* Website Header */
 header {
