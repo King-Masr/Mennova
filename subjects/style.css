@@ -1,0 +1,66 @@
+#landing {
+  padding: 20px;
+  text-align: center;
+}
+#landing h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+#landing main {
+  gap: 20px;
+  display: grid;
+  padding: 0 10px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.subject-item {
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.subject-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.subject-item h3 {
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* Animation */
+@keyframes leftToRight {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+}
+@keyframes rightToLift {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
