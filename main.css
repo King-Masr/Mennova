@@ -54,6 +54,40 @@ main {
 .en {
   direction: ltr;
 }
+/* Alert Message */
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+}
+.popup-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.popup-message {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.popup-close-button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.popup-close-button:hover {
+  background-color: #3e8e41;
+}
 .mainTitle {
   z-index: 1;
   font-size: 30px;

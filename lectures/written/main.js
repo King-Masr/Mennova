@@ -1,13 +1,13 @@
 // if (sessionStorage.getItem("authToken")) {
-  // const level = sessionStorage.getItem("level");
-  // const department = sessionStorage.getItem("department");
-  // const level = sessionStorage.setItem("level", 1);
-  // const department = sessionStorage.setItem(
+  // level = sessionStorage.getItem("level");
+  // department = sessionStorage.getItem("department");
+  // level = sessionStorage.setItem("level", 1);
+  // department = sessionStorage.setItem(
   //   "department",
   //   "Distinctive_General_Mathematics"
   // );
-  const level = "1";
-  const department = "Distinctive_General_Mathematics";
+  level = "1";
+  department = "Distinctive_General_Mathematics";
   console.log(level);
   console.log(department);
   // Subjects data

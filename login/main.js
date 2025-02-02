@@ -8,35 +8,6 @@ document.getElementById("newaccount").addEventListener("click", function (e) {
   document.getElementsByTagName("form")[0].style.display = "block";
   document.getElementsByTagName("form")[1].style.display = "none";
 });
-const categories = {
-  "تعليم ابتدائي": [
-    { name: "العلوم ابتدائى", value: "Elementary_Science" },
-    { name: "العلوم مميز ابتدائى", value: "Distinctive_Elementary_Science" },
-    { name: "الرياضيات ابتدائى", value: "Elementary_Mathematics" },
-    { name: "اللغة العربية ابتدائى", value: "Elementary_Arabic_Language" },
-    { name: "اللغة الإنجليزية ابتدائى", value: "Elementary_English_Language" },
-    { name: "الدراسات الاجتماعية", value: "Social_Studies" },
-  ],
-  "تعليم عام": [
-    { name: "الفيزياء عام", value: "General_Physics" },
-    { name: "الفيزياء مميز عام", value: "Distinctive_General_Physics" },
-    { name: "الكيمياء عام", value: "General_Chemistry" },
-    { name: "الكيمياء مميز عام", value: "Distinctive_General_Chemistry" },
-    { name: "البيولوجي عام", value: "Leneral_Biology" },
-    { name: "البيولوجي مميز عام", value: "Distinctive_General_Biology" },
-    { name: "الرياضيات عام", value: "General_Mathematics" },
-    { name: "الرياضيات مميز عام", value: "Distinctive_General_Mathematics" },
-    { name: "التربية الخاصة", value: "Special_Education" },
-    { name: "اللغة العربية عام", value: "General_Arabic_Language" },
-    { name: "اللغة الإنجليزية عام", value: "General_English_Language" },
-    { name: "اللغة الفرنسية عام", value: "General_French_Language" },
-    { name: "اللغة الألمانية عام", value: "General_German_Language" },
-    { name: "الفلسفة عام", value: "General_Philosophy" },
-    { name: "علم النفس التربوى عام", value: "General_Psychology" },
-    { name: "التاريخ عام", value: "General_History" },
-    { name: "الجغرافيا عام", value: "General_Geography" },
-  ],
-};
 const searchInput = document.getElementById("search");
 const departmentList = document.getElementById("department-list");
 let selectedDepartmentInput = document.getElementById("selected-department");
@@ -91,7 +62,7 @@ document.getElementById("signupForm").addEventListener("submit", async function 
   const password = document.getElementById("password").value;
   // Hash the password before sending
   const hashedPassword = await hashPassword(password);
-  console.log(JSON.stringify({ username, password, password: hashedPassword }));
+  console.log(JSON.stringify({ action: "signin", username: username }));
   // Example API call to validate login (replace with your API endpoint)
   const response = await fetch("https://mennova.wuaze.com/system.php", {
     method: "POST",
@@ -139,12 +110,25 @@ document.getElementById("signinForm").addEventListener("submit", async function 
     // alert("Invalid credentials");
   }
 });
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const level = document.getElementById("level").value;
+  const department = document.getElementById("selected-department").value;
+  sessionStorage.setItem("authToken", "Guest");
+  sessionStorage.setItem("level", level);
+  sessionStorage.setItem("department", department);
+  if (sessionStorage.getItem("redirect")) {
+    window.location.href = sessionStorage.getItem("redirect");
+  } else {
+    window.location.href = window.location.origin;
+  }
+});
 // Function to hash the password
-async function hashPassword(password) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(password);
-  const hash = await crypto.subtle.digest("SHA-256", data);
-  return Array.from(new Uint8Array(hash))
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join("");
-}
+// async function hashPassword(password) {
+//   const encoder = new TextEncoder();
+//   const data = encoder.encode(password);
+//   const hash = await crypto.subtle.digest("SHA-256", data);
+//   return Array.from(new Uint8Array(hash))
+//     .map((b) => b.toString(16).padStart(2, "0"))
+//     .join("");
+// }
