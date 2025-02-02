@@ -1,3 +1,8 @@
+#landing main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 h1, h2 {
   margin: 0.5rem 0;
   text-align: center;
@@ -16,6 +21,7 @@ h1, h2 {
 #landing li {
   display: flex;
   padding: 0.5rem;
+  min-width: 280px;
   margin: 0.5rem 0;
   justify-content: space-evenly;
   border-bottom: 1px solid #ddd;

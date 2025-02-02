@@ -269,6 +269,10 @@ main #mega-menu {
 #mega-menu li a i {
   margin-right: 10px;
 }
+/* Landing Section */
+#landing main {
+  min-height: 70vh;
+}
 /* Footer */
 footer {
   text-align: center;
