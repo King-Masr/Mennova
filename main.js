@@ -135,6 +135,104 @@ const subjects = {
     },
   ],
 };
+// Exams data
+// {
+//   name: "International Organizations Exam",
+//   questionsNum: 20,
+//   time: "120 دقيقة",
+//   link: "/exams/international-organizations",
+// },
+const exams = {
+  Distinctive_General_Mathematics: [
+    {
+      1: [
+        {
+          name: "امتحان منظمات دولية",
+          description: "امتحان علم نفس النمو لعام 2024 في كلية التربية",
+          questionsNum: 27,
+          time: "120 دقيقة",
+          link: "/exams/COM-MEN113E1-1",
+        },
+        {
+          name: "علم نفس النمو 2024",
+          description: "امتحان علم نفس النمو لعام 2024 في كلية التربية",
+          questionsNum: 20,
+          time: "120 دقيقة",
+          link: "/exams/MEN111-1-2024",
+        },
+      ],
+      2: [
+        {
+          name: "International Organizations Exam",
+          description: "",
+          questionsNum: 20,
+          time: "120 دقيقة",
+          link: "/exams/international-organizations",
+        },
+      ],
+    },
+    {
+      1: [
+        {
+          name: "International Organizations Exam",
+          description: "",
+          questionsNum: 20,
+          time: "120 دقيقة",
+          link: "/exams/CUR121-2-2024",
+        },
+      ],
+      2: [
+        {
+          name: "International Organizations Exam",
+          description: "",
+          questionsNum: 20,
+          time: "120 دقيقة",
+          link: "/exams/international-organizations",
+        },
+      ],
+    },
+    {
+      1: [
+        {
+          name: "International Organizations Exam",
+          description: "",
+          questionsNum: 20,
+          time: "120 دقيقة",
+          link: "/exams/international-organizations",
+        },
+      ],
+      2: [
+        {
+          name: "International Organizations Exam",
+          description: "",
+          questionsNum: 20,
+          time: "120 دقيقة",
+          link: "/exams/international-organizations",
+        },
+      ],
+    },
+    {
+      1: [
+        {
+          name: "International Organizations Exam",
+          description: "",
+          questionsNum: 20,
+          time: "120 دقيقة",
+          link: "/exams/international-organizations",
+        },
+      ],
+      2: [
+        {
+          name: "International Organizations Exam",
+          description: "",
+          questionsNum: 20,
+          time: "120 دقيقة",
+          link: "/exams/international-organizations",
+        },
+      ],
+    },
+  ],
+};
 function alertMessage(title, message) {
   // Create the popup container
   const popupContainer = document.createElement("div");

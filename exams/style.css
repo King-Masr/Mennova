@@ -9,10 +9,8 @@
 }
 #landing main {
   gap: 20px;
-  display: grid;
-  padding: 0 10px;
+  display: flex;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .exam-item {
   padding: 20px;
@@ -30,11 +28,13 @@
 .exam-item h3 {
   color: #333;
   font-size: 20px;
+  text-align: center;
   margin-bottom: 10px;
 }
 .exam-item p {
   color: #555;
   font-size: 16px;
+  text-align: center;
   margin-bottom: 15px;
 }
 .start-exam-btn {
