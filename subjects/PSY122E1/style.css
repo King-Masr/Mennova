@@ -15,6 +15,12 @@
   align-content: flex-start;
 }
 #written-lectures {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#recorded-lectures {
+  gap: 20px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -27,9 +33,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.assest-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.assest-item:hover img {
+  width: 140vh;
 }
 .assest-item h3 {
   color: #333;
