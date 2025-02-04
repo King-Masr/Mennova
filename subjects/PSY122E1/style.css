@@ -8,14 +8,18 @@
 }
 #landing main {
   gap: 20px;
-  display: grid;
-  padding: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-content: flex-start;
 }
-.subject-item {
+#written-lectures {
+  display: flex;
+  flex-wrap: wrap;
+}
+.assest-item {
   padding: 20px;
-  cursor: pointer;
   text-align: left;
   border-radius: 8px;
   background-color: #fff;
@@ -23,15 +27,18 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.subject-item:hover {
+.assest-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.subject-item h3 {
+.assest-item h3 {
   color: #333;
   font-size: 20px;
   text-align: center;
   margin-bottom: 10px;
+}
+.assest-item img {
+  width: 100%;
 }
 /* Animation */
 @keyframes leftToRight {

@@ -8,10 +8,11 @@
 }
 #landing main {
   gap: 20px;
-  display: grid;
-  padding: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-content: flex-start;
 }
 .subject-item {
   padding: 20px;
@@ -31,7 +32,6 @@
   color: #333;
   font-size: 20px;
   text-align: center;
-  margin-bottom: 10px;
 }
 /* Animation */
 @keyframes leftToRight {

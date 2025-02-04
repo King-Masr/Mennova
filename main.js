@@ -1,4 +1,4 @@
-const term = 1;
+const term = 2;
 let level, department;
 if (sessionStorage.getItem("authToken")) {
   level = sessionStorage.getItem("level");
@@ -51,14 +51,13 @@ const subjects = {
         { name: "اللغة العربية", code: "EDU114" },
         { name: "قضايا مجتمعية", code: "UNV115" },
         { name: "اللغة الفرنسية", code: "FAR1" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
+        { name: "Algebra", code: "MAT111" },
+        { name: "Calculus (1)", code: "MAT112" },
+        { name: "Analytical Geometry (1)", code: "MAT113" },
+        { name: "Statics (1)", code: "MAT114" },
+        { name: "General Chemistry", code: "CHE115" },
+        { name: "Properties of matter and Heat", code: "PHY116" },
+        { name: "Introduction to computer science", code: "MAT117E1" },
       ],
       2: [
         { name: "استراتيجيات التعلم النشط", code: "CUR121" },
@@ -83,10 +82,11 @@ const subjects = {
     },
     {
       1: [
-        { name: "القيادة التربوية", code: "" },
-        { name: "المنهج المدرسي", code: "" },
-        { name: "تدريس مصغر (2)", code: "" },
-        // { name: "", code: "" },
+        { name: "القيادة التربوية", code: "COM231" },
+        { name: "المنهج المدرسي", code: "CUR232" },
+        { name: "", code: "" },
+        { name: "", code: "" },
+        { name: "تدريس مصغر (2)", code: "CUR235" },
         { name: "Linear algebra", code: "" },
         { name: "", code: "" },
         { name: "", code: "" },
@@ -95,10 +95,30 @@ const subjects = {
         { name: "", code: "" },
       ],
       2: [
-        { name: "الاتجاهات المعاصرة في علم النفس", code: "" },
-        { name: "دمج ذوي الاحتياجات الخاصة", code: "" },
-        { name: "تدريب ميداني (1)", code: "" },
-        { name: "تقنيات المعلومات والاتصال", code: "" },
+        { name: "الاتجاهات المعاصرة في علم النفس", code: "PSY241" },
+        { name: "دمج ذوي الاحتياجات الخاصة", code: "SPE242" },
+        { name: "", code: "" },
+        { name: "تدريب ميداني (1)", code: "CUR244" },
+        { name: "تقنيات المعلومات والاتصال", code: "CUR245" },
+        { name: "", code: "" },
+        { name: "", code: "" },
+        { name: "", code: "" },
+      ],
+    },
+    {
+      1: [
+        { name: "تقييم التعلم", code: "PSY351" },
+        { name: "تكنولوجيا التعليم والتحول الرقمي", code: "TEC352" },
+        { name: "تدريب ميداني (2)", code: "CUR353" },
+        { name: "", code: "" },
+        { name: "", code: "" },
+        { name: "", code: "" },
+        { name: "", code: "" },
+      ],
+      2: [
+        { name: "التربية المقارنة والدولية", code: "COM361" },
+        { name: "", code: "" },
+        { name: "تدريب ميداني (3)", code: "CUR363" },
         { name: "", code: "" },
         { name: "", code: "" },
         { name: "", code: "" },
@@ -107,41 +127,43 @@ const subjects = {
     },
     {
       1: [
-        { name: "تقييم التعلم", code: "" },
-        { name: "تكنولوجيا التعليم والتحول الرقمي", code: "" },
-        { name: "تدريب ميداني (2)", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
+        { name: "مشروع تخرج (ممتد)", code: "EDU471" },
+        { name: "بحوث فعل (ممتد)", code: "EDU472" },
+        { name: "تدريب ميداني (4)", code: "CUR473" },
       ],
       2: [
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-      ],
-    },
-    {
-      1: [
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
-      ],
-      2: [
-        { name: "", code: "" },
-        { name: "", code: "" },
-        { name: "", code: "" },
+        { name: "مشروع تخرج (ممتد)", code: "EDU481" },
+        { name: "بحوث فعل (ممتد)", code: "EDU482" },
+        { name: "تدريب ميداني (5)", code: "CUR483" },
       ],
     },
   ],
 };
-// Exams data
-// {
-//   name: "International Organizations Exam",
-//   questionsNum: 20,
-//   time: "120 دقيقة",
-//   link: "/exams/international-organizations",
-// },
+// Exams subjects assests
+const subjects_assests = {
+  PSY122E1: [
+    {
+      type: "written-lectures",
+      name: "المحاضرة الاولى - 1",
+      path: "E1-1.jpg",
+    },
+    {
+      type: "written-lectures",
+      name: "المحاضرة الاولى - 2",
+      path: "E1-1.jpg",
+    },
+    {
+      type: "written-lectures",
+      name: "المحاضرة الاولى - 3",
+      path: "E1-1.jpg",
+    },
+    {
+      type: "written-lectures",
+      name: "المحاضرة الاولى - 4",
+      path: "E1-1.jpg",
+    },
+  ],
+};
 const exams = {
   Distinctive_General_Mathematics: [
     {
