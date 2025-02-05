@@ -60,8 +60,6 @@ document.getElementById("signupForm").addEventListener("submit", async function 
   const department = document.getElementById("selected-department").value;
   const phone = document.getElementById("phone").value;
   const password = document.getElementById("password").value;
-  // Hash the password before sending
-  const hashedPassword = await hashPassword(password);
   console.log(JSON.stringify({ action: "signin", username: username }));
   // Example API call to validate login (replace with your API endpoint)
   const response = await fetch("https://mennova.wuaze.com/system.php", {
@@ -86,7 +84,6 @@ document.getElementById("signinForm").addEventListener("submit", async function 
   e.preventDefault();
   const username = document.getElementById("cusername").value;
   const password = document.getElementById("cpassword").value;
-  // Hash the password before sending
   console.log(JSON.stringify({ action: "signin", username: username, password: password }));
   // Example API call to validate login (replace with your API endpoint)
   const response = await fetch("https://mennova.wuaze.com/system.php", {

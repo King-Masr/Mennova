@@ -243,9 +243,9 @@ const exams = {
       ],
       2: [
         {
-          name: "International Organizations Exam",
+          name: "استراتيجيات التعلم النشط 2024",
           description: "",
-          questionsNum: 20,
+          questionsNum: 27,
           time: "120 دقيقة",
           link: "/exams/CUR121-1-2024",
         },
