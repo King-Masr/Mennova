@@ -1,9 +1,35 @@
 const term = 2;
 let level, department;
-if (sessionStorage.getItem("authToken")) {
-  level = sessionStorage.getItem("level");
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    let date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+function deleteCookie(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+function getCookie(name) {
+  let value = null;
+  let x1 = document.cookie.split("; ");
+  let y1 = Array.from(x1);
+  y1.forEach((cookie) => {
+    let x2 = cookie.split("=");
+    let y2 = Array.from(x2);
+    if (y2[0] == name) {
+      value = y2[1];
+      return true;
+    }
+  });
+  return value;
+}
+if (getCookie("authToken")) {
+  level = getCookie("level");
   level--;
-  department = sessionStorage.getItem("department");
+  department = getCookie("department");
 } else {
   if (window.location.pathname != "/login/") {
     sessionStorage.setItem("redirect", window.location.href);

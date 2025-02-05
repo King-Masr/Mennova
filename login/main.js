@@ -114,9 +114,9 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
   const level = document.getElementById("level").value;
   const department = document.getElementById("selected-department").value;
-  sessionStorage.setItem("authToken", "Guest");
-  sessionStorage.setItem("level", level);
-  sessionStorage.setItem("department", department);
+  setCookie("authToken", "Guest");
+  setCookie("level", level);
+  setCookie("department", department);
   if (sessionStorage.getItem("redirect")) {
     window.location.href = sessionStorage.getItem("redirect");
     sessionStorage.removeItem("redirect");
