@@ -71,7 +71,9 @@ document.getElementById("signupForm").addEventListener("submit", async function 
   });
   if (response.ok) {
     const data = await response.json();
-    // sessionStorage.setItem("authToken", data.token); // Store token securely
+    setCookie("authToken", data.token, 7); // Store token securely
+    setCookie("level", level, 7);
+    setCookie("department", department, 7);
     // alert("Login successful!");
     // Redirect or load secure content
     const baseUrl = window.location.origin;
@@ -101,7 +103,9 @@ document.getElementById("signinForm").addEventListener("submit", async function 
   if (response.ok) {
     const data = await response.json();
     console.log(data);
-    sessionStorage.setItem("authToken", data.token); // Store token securely
+    setCookie("authToken", data.token, 7); // Store token securely
+    setCookie("level", level, 7);
+    setCookie("department", department, 7);
     // alert("Login successful!");
     // Redirect or load secure content
     // const baseUrl = window.location.origin;
