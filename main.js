@@ -141,6 +141,33 @@ const subjects = {
 };
 // Exams subjects assests
 const subjects_assests = {
+  CUR121: [
+    {
+      type: "written-lectures",
+      name: "المحاضرة الاولى - 1",
+      path: "E1-1.jpg",
+    },
+    {
+      type: "written-lectures",
+      name: "المحاضرة الاولى - 2",
+      path: "E1-1.jpg",
+    },
+    {
+      type: "written-lectures",
+      name: "المحاضرة الاولى - 3",
+      path: "E1-1.jpg",
+    },
+    {
+      type: "written-lectures",
+      name: "المحاضرة الاولى - 4",
+      path: "E1-1.jpg",
+    },
+    {
+      type: "recorded-lectures",
+      name: "المقرر كامل",
+      embed_code: `<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=zknuNXkx4pS4Abex&amp;list=PLdk2QqkRYjuug2P3afkLT6W1ZpyQyTA1d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    },
+  ],
   PSY122E1: [
     {
       type: "written-lectures",
@@ -161,6 +188,11 @@ const subjects_assests = {
       type: "written-lectures",
       name: "المحاضرة الاولى - 4",
       path: "E1-1.jpg",
+    },
+    {
+      type: "recorded-lectures",
+      name: "المقرر كامل",
+      embed_code: `<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=PUqiA90dmJsnWQ8l&amp;list=PLMoTUWT4kD28gQmfqZ7ioPyqhACaf_918" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     },
   ],
 };
@@ -189,7 +221,7 @@ const exams = {
           description: "",
           questionsNum: 20,
           time: "120 دقيقة",
-          link: "/exams/CUR121-2-2024",
+          link: "/exams/CUR121-1-2024",
         },
       ],
     },
@@ -200,7 +232,7 @@ const exams = {
           description: "",
           questionsNum: 20,
           time: "120 دقيقة",
-          link: "/exams/international-organizations",
+          link: "/exams/COM-MEN113E1-1",
         },
       ],
       2: [
@@ -209,7 +241,7 @@ const exams = {
           description: "",
           questionsNum: 20,
           time: "120 دقيقة",
-          link: "/exams/international-organizations",
+          link: "/exams/COM-MEN113E1-1",
         },
       ],
     },
@@ -220,7 +252,7 @@ const exams = {
           description: "",
           questionsNum: 20,
           time: "120 دقيقة",
-          link: "/exams/international-organizations",
+          link: "/exams/COM-MEN113E1-1",
         },
       ],
       2: [
@@ -229,7 +261,7 @@ const exams = {
           description: "",
           questionsNum: 20,
           time: "120 دقيقة",
-          link: "/exams/international-organizations",
+          link: "/exams/COM-MEN113E1-1",
         },
       ],
     },
@@ -240,7 +272,7 @@ const exams = {
           description: "",
           questionsNum: 20,
           time: "120 دقيقة",
-          link: "/exams/international-organizations",
+          link: "/exams/COM-MEN113E1-1",
         },
       ],
       2: [
@@ -249,7 +281,7 @@ const exams = {
           description: "",
           questionsNum: 20,
           time: "120 دقيقة",
-          link: "/exams/international-organizations",
+          link: "/exams/COM-MEN113E1-1",
         },
       ],
     },

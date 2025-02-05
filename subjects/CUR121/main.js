@@ -1,5 +1,5 @@
-// سيكولوجية التعليم والتعلم
-const current_subject = "PSY122E1";
+// استراتيجيات التعلم النشط
+const current_subject = "CUR121";
 const mainSection = document.querySelector("#landing main");
 const writtenLectures = document.getElementById("written-lectures");
 const recordedLectures = document.getElementById("recorded-lectures");
