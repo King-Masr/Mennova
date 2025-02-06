@@ -49,7 +49,7 @@
           <input type="text" name="username" id="username" class="en" placeholder="241***72" autocomplete="username" required>
           <label for="name">الاسم (رباعي): </label>
           <input type="text" name="name" id="name" placeholder="اكتب اسمك" autocomplete="name" required>
-          <!-- <label for="level">الفرقة: </label>
+          <label for="level">الفرقة: </label>
           <select id="level" name="level" required>
             <option value="1">الفرقة الاولى</option>
             <option value="2">الفرقة الثانية</option>
@@ -63,7 +63,7 @@
               Departments will be dynamically inserted here
             </ul>
           </section>
-          <input type="hidden" id="selected-department" name="department" required> -->
+          <input type="hidden" id="selected-department" name="department" required>
           <label for="phone">رقم الهاتف (واتساب): </label>
           <input type="text" name="phone" id="phone" class="en" placeholder="0110****813" autocomplete="tel">
           <label for="password">كلمة المرور: </label>
@@ -82,7 +82,8 @@
         </form>
         <form action="" method="post" id="loginForm">
           <h2>تسجيل الدخول</h2>
-          <select id="level" name="level" required>
+          <label for="glevel">الفرقة: </label>
+          <select id="glevel" name="level" required>
             <option value="1">الفرقة الاولى</option>
             <option value="2">الفرقة الثانية</option>
             <option value="3">الفرقة الثالثة</option>
@@ -90,12 +91,12 @@
           </select>
           <label>القسم: </label>
           <section class="dropdown-container">
-            <input type="text" id="search" placeholder="البحث عن القسم...">
-            <ul id="department-list" class="dropdown-list">
+            <input type="text" id="gsearch" placeholder="البحث عن القسم...">
+            <ul id="gdepartment-list" class="dropdown-list">
               <!-- Departments will be dynamically inserted here -->
             </ul>
           </section>
-          <input type="hidden" id="selected-department" name="department" required>
+          <input type="hidden" id="gselected-department" name="department" required>
           <button type="submit">تسجيل الدخول</button>
         </form>
       </main>

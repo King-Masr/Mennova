@@ -52,6 +52,50 @@ document.addEventListener("click", (e) => {
     departmentList.style.display = "none";
   }
 });
+const gsearchInput = document.getElementById("gsearch");
+const gdepartmentList = document.getElementById("gdepartment-list");
+let gselectedDepartmentInput = document.getElementById("gselected-department");
+// Populate the dropdown with categories and departments
+Object.keys(categories).forEach((category) => {
+  const categoryHeader = document.createElement("li");
+  categoryHeader.textContent = category;
+  categoryHeader.style.textAlign = "center";
+  categoryHeader.classList.add("category");
+  gdepartmentList.appendChild(categoryHeader);
+  categories[category].forEach((department) => {
+    const li = document.createElement("li");
+    li.textContent = department.name;
+    li.dataset.value = department.value;
+    li.addEventListener("click", () => {
+      gsearchInput.value = department.name; // Set input value to the clicked department
+      gselectedDepartmentInput.value = department.value; // Set hidden input value
+      gdepartmentList.style.display = "none"; // Hide the dropdown
+    });
+    gdepartmentList.appendChild(li);
+  });
+});
+// Show dropdown when input is focused
+gsearchInput.addEventListener("focus", () => {
+  gdepartmentList.style.display = "block";
+});
+// Filter dropdown based on input
+gsearchInput.addEventListener("input", () => {
+  const filter = searchInput.value.toLowerCase();
+  Array.from(gdepartmentList.children).forEach((item) => {
+    if (item.classList.contains("category")) return; // Skip categories
+    if (item.textContent.toLowerCase().includes(filter)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+});
+// Hide dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".dropdown-container")) {
+    gdepartmentList.style.display = "none";
+  }
+});
 document.getElementById("signupForm").addEventListener("submit", async function (e) {
   e.preventDefault();
   const username = document.getElementById("username").value;
@@ -62,10 +106,14 @@ document.getElementById("signupForm").addEventListener("submit", async function 
   const password = document.getElementById("password").value;
   console.log(JSON.stringify({ action: "signin", username: username }));
   // Example API call to validate login (replace with your API endpoint)
-  const response = await fetch("https://mennova.wuaze.com/system.php", {
+  const response = await fetch("https://www.mennova.free.nf/system.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({action: "registration", username: username, password: password}),
+    body: JSON.stringify({
+      action: "registration",
+      username: username,
+      password: password,
+    }),
   });
   if (response.ok) {
     const data = await response.json();
@@ -86,7 +134,7 @@ document.getElementById("signinForm").addEventListener("submit", async function 
   const password = document.getElementById("cpassword").value;
   console.log(JSON.stringify({ action: "signin", username: username, password: password }));
   // Example API call to validate login (replace with your API endpoint)
-  const response = await fetch("https://mennova.wuaze.com/system.php", {
+  const response = await fetch("https://www.mennova.free.nf/system.php", {
     method: "POST",
     mode: "no-cors",
     headers: { "Content-Type": "application/json" },
@@ -113,8 +161,8 @@ document.getElementById("signinForm").addEventListener("submit", async function 
 });
 document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  const level = document.getElementById("level").value;
-  const department = document.getElementById("selected-department").value;
+  const level = document.getElementById("glevel").value;
+  const department = document.getElementById("gselected-department").value;
   setCookie("authToken", "Guest");
   setCookie("level", level);
   setCookie("department", department);

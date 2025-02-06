@@ -278,11 +278,11 @@ const quizData = [
     ],
     answer: 0,
   },
-  // مقالي
-  // {
-  //   question:
-  //     "1. ",
-  //   answer_path: "assests/1.jpg",
-  // },
+  // essay
+  {
+    question:
+      "1. ",
+    answer_path: "assests/1.jpg",
+  },
   // Add more questions here...
 ];
